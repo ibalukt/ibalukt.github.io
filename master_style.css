@@ -5,7 +5,7 @@ body {
         rgba(8,120,164,0.75),
         rgba(0,61,115, 1.0)
     ),
-     url('images/coasterback.jpg');
+     url('coasterback.jpg');
      
     background-attachment: fixed;
     background-position: center;
