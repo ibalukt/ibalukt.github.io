@@ -3,6 +3,8 @@
 //The names for the headings of the table
 var headings = ["name","length","height","speed","type","park","continent"]
 
+
+
 //Variable used to add rows and cells to the table.
 var table = document.getElementById('info');
 
@@ -15,7 +17,7 @@ var index1 = 0;
 
 function build()
 { 
-    while (index1 < height)
+    while (index1 < 508)
     {                    
         //If it is the first row, create the headers for the table
         if (index1 == 0)
