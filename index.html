@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coaster Crunch</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="images\fun.png">
+    <!--Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee|Permanent+Marker" rel="stylesheet">
+
+    <!--Internal Style Sheet -->
+    <link rel="stylesheet" type= "text/css" href="master_style.css"/>
+    <link rel="stylesheet" type= "text/css" href="css\responsive_style.css"/>
+    <link rel="stylesheet" type="text/css" href="css\table.css"/>
+    <link rel="stylesheet" href="css\animate.css">
+   
+
+    
+
+</head>
+<body>
+    <header id="bannerImg">
+        <img src="images\redroller.png"/>
+       
+    </header>
+    <main>
+        <section>
+
+            <div class="titleBar">
+                <h1> COASTER CRUNCH </h1>
+            </div>
+
+            <div class="pText">
+                <p>
+                    Got an itch for thrills? We’ve gathered up the fastest, tallest and all around meanest roller coasters in the world 
+                    and you’ll gain insight on where to find them. Maybe you’re looking for coaster design ideas,  or just something to 
+                    add on your must-ride list. Coaster crunch has broken down the numbers and categories for you. Explore our findings 
+                    and take a look at our complete data table below. 
+                </p>
+            </div>
+
+            <div id="mainChart">
+                <canvas id="barGraph"></canvas>
+            </div>
+
+            <button id="dropdownBar">
+                <h1 id=dropdownText >Show me the data!</h1>
+            </button>
+            <div id="tableWrapper" class = "animated fadeInUpBig">
+                <div id="dropDown">
+                    <div id ="tableHeader">
+                        <div id="upOrDown">
+        
+                            <p><b> DISPLAY DATA:</b> </p>
+                            <div class=inputContainer>   
+                                <input type="radio" name="order" id="ascending" checked="checked"> Ascending </input>
+            
+                                <input type="radio" name="order" id="descending"> Descending </input>
+                            </div>
+                        </div>
+        
+                        
+                        <div id="parameters">
+        
+                            <p><b> SORT BY:</b> </p>
+                            <div class=inputContainer>
+                                <input type="radio" name="datafocus" value=1> Length </input>
+            
+                                <input type="radio" name="datafocus" value=2> Height </input>
+            
+                                <input type="radio" name="datafocus" value=3> Speed </input>
+                            </div>
+                        </div>
+        
+                    </div>
+                            
+                    <div id="tableHolder">
+                        
+                        <table id="info">
+        
+                        </table>
+        
+                    </div>
+        
+                    <div id="tableFooter">
+        
+                        <div id="buildButton"> 
+                            
+                            <p> <b>CLICK TO DISPLAY </b></p>
+        
+                        </div>
+        
+                    </div>
+        
+                    <!--<div id="container">
+        
+                        <div id="buildButton">        
+                        </div>
+                        
+                        <div id="destroyButton">                
+                        </div>-->
+        
+                    </div>
+        
+                </div>
+            </div>
+            
+
+            
+
+        </section>
+
+        <section>
+                <div id="randomText">
+                    <p>
+                        We’ve gathered over 500 active, running roller coasters from around the world, and you can find them all in the expandable table above. 
+                        Did you know that the tallest roller coaster, the mighty Kingda Ka is over 34 stories high? That’s greater than most radio towers around 
+                        the world! Looking for more leisurely affair? The little Padrino Voladores barely crests seven miles per hour. Each coaster listed includes
+                         their park of residence and the continent you can find it on. 
+                        
+                        In the charts below you’ll find that we’ve broken down our rides into the three hallmarks of any coaster- length, speed and height.                             
+                    </p>
+                </div>
+                
+            <div class="titleBar">
+                <h1>HEIGHT </h1>
+            </div>
+
+            <div class="pText">
+                <p>
+                        When we think coasters, we think big. But just how many roller coasters out there really make a climb? Our first chart 
+                        takes all of our data and splits them up into five ranges. Here, we can see that most of the world’s coasters never get 
+                        over 90 miles per hour.  Next, we can see that the top two hundred roller coasters in height find their home in North 
+                        America. Europe and Asia split evenly and nearly claim the rest. Lastly, when you’re thinking of height, you’re thinking 
+                        of steel. The vast majority of roller coasters running are made of steel- and they’re even more represented when it comes 
+                        to height. There tall structures need to be light and flexible in the wind. 
+                </p>
+
+            </div>
+
+            <div class="pieChartContainer">
+
+                <!--Here is the right and left buttons for this slider. We can put some arrow icons or something in them for sleeker visuals. 
+                For now they are just red circles.-->
+                <div class="Rbutton">
+                </div>
+        
+                <div class="Lbutton">
+                </div>
+
+                <!--this is the giant bar that will contain all of the individual charts. It is necessary to have 4 chart occupy this container 
+                for looping/smooth transition purposes. The 4th chart in the slider will have to be identical to the first chart.-->
+                <div class="slidingBox">
+
+                    <!--These are the individual chart boxes. Each one will have one of our pie charts in them.-->
+                    <!--_______________________________________PIE CHART 1___________________________________________________-->
+                    <div class="chartBox">
+                        <div class="chartWrapper">
+                            <canvas id="heightOne"></canvas>
+                        </div>
+                    </div>
+
+                    <!--_______________________________________PIE CHART 2___________________________________________________-->
+                    <div class="chartBox">
+
+                        <div class="chartWrapper">
+                            <canvas id="heightTwo"></canvas>
+                        </div>
+
+                    </div>
+                    
+                    <!--_______________________________________PIE CHART 3___________________________________________________-->
+                    <div class="chartBox">
+                        OBJECT
+
+                        <div class="chartWrapper">
+                            <canvas id="heightThree"></canvas>
+                        </div>
+
+                    </div>
+
+                    <!--_______________________________________PIE CHART 1 DUPLICATE__________________________________________-->
+                    <div class="chartBox">
+                        CHART 1 
+
+                        <div class="chartWrapper">
+                            <canvas id="heightFour"></canvas>
+                        </div>
+
+                    </div>
+
+                </div>
+            
+            </div>
+        
+        </section>
+
+        <section>
+                
+            <div class="titleBar">
+
+                <h1> LENGTH</h1>
+
+            </div>
+
+            <div class="pText">
+                <p>
+                        Sure, a tall coaster gets the wind in your hair – but what fun is a ride if it’s over quickly? We’ve broken down the track
+                         by every 1000th foot. Most coasters sit comfortably in the 1000-200 range. Perhaps unsurprisingly, steel takes an 
+                         impressive lead once more. Don’t count the classic woodie out though- for over 35 years, King Island’s The Beast has held
+                          the record as the longest wooden coaster constructed. It’s so long that it requires two chain-lift drops, and guests 
+                          will need to hold on for over four minutes. With plenty of space and plenty of parks, North America dominates the scene 
+                          for the longest super coasters in the world. 
+                </p>
+
+            </div>
+
+            <div class="pieChartContainer">
+
+                <div class="Rbutton">
+                </div>
+        
+                <div class="Lbutton">
+                </div>
+
+                <div class="slidingBox">
+
+                    <!--These are the individual chart boxes. Each one will have one of our pie charts in them.-->
+                    <!--_______________________________________PIE CHART 1___________________________________________________-->
+                    <div class="chartBox">
+ 
+                        <div class="chartWrapper">
+                            <canvas id="lengthOne"></canvas>
+                        </div>
+
+                    </div>
+
+                    <!--_______________________________________PIE CHART 2___________________________________________________-->
+                    <div class="chartBox">
+
+                        <div class="chartWrapper">
+                            <canvas id="lengthTwo"></canvas>
+                        </div> 
+
+                    </div>
+                    
+                    <!--_______________________________________PIE CHART 3___________________________________________________-->
+                    <div class="chartBox">
+   
+                        <div class="chartWrapper">
+                            <canvas id="lengthThree"></canvas>
+                        </div>
+
+                    </div>
+
+                    <!--_______________________________________PIE CHART 1 DUPLICATE__________________________________________-->
+                    <div class="chartBox">
+  
+                        <div class="chartWrapper">
+                            <canvas id="lengthFour"></canvas>
+                        </div>
+
+                    </div>
+
+                </div>
+            
+            </div>
+        
+        </section>
+
+        <section>
+                
+            <div class="titleBar">
+
+                <h1> SPEED</h1>
+
+            </div>
+
+            <div class="pText">
+                <p>
+                        In the end, it’s all about speed. We tracked from coasters slinking along under 10 miles per hour to blistering speeds over 
+                        121 miles per hour. Most roller coasters, sit comfortably in between; around 40-60 miles per hour. You might be seeing a trend 
+                        here – steel coasters take the lead once more. Notably however, while many small steel coasters populate the lower speed ranges, 
+                        most wooden coasters are sizable projects – and fast. As in all other categories, North America tops the list for the top two hundred 
+                        fastest roller coasters.
+                </p>
+
+            </div>
+
+            <div class="pieChartContainer">
+
+                <div class="Rbutton">
+                </div>
+        
+                <div class="Lbutton">
+                </div>
+
+                <div class="slidingBox">
+
+                    <!--These are the individual chart boxes. Each one will have one of our pie charts in them.-->
+                    <!--_______________________________________PIE CHART 1___________________________________________________-->
+                    <div class="chartBox">
+                        CHART 1
+
+                        <div class="chartWrapper">
+                            <canvas id="speedOne"></canvas>
+                        </div>
+
+                    </div>
+
+                    <!--_______________________________________PIE CHART 2___________________________________________________-->
+                    <div class="chartBox">
+                        CHART 2
+
+                        <div class="chartWrapper">
+                            <canvas id="speedTwo"></canvas>
+                        </div>
+
+                    </div>
+                    
+                    <!--_______________________________________PIE CHART 3___________________________________________________-->
+                    <div class="chartBox">
+                        CHART 3
+
+                        <div class="chartWrapper">
+                            <canvas id="speedThree"></canvas>
+                        </div>
+
+                    </div>
+
+                    <!--_______________________________________PIE CHART 1 DUPLICATE__________________________________________-->
+                    <div class="chartBox">
+                        CHART 1 
+
+                        <div class="chartWrapper">
+                            <canvas id="speedFour"></canvas>
+                        </div>
+
+                    </div>
+
+                </div>
+            
+            </div>
+        
+        </section>   
+
+    </main>
+    <footer>
+        <p>Group Project, Team Phase 1 for CWEB1111-01 by Luke I. & LaRissa P.</p>
+    </footer>
+
+    <script src="coasters.js"></script>
+    <script src="sorting.js"></script>
+    <script src="table.js"></script>
+    <script src="datafinder.js"></script>
+    <script src="tabletoggle.js"></script>
+    <script src = "graphs\barGraph.js"></script>
+    <script src = "graphs\lengthGraphs.js"></script>
+    <script src = "graphs\heightGraphs.js"></script>
+    <script src = "graphs\speedGraphs.js"></script>
+    <script src= "chartslider.js"> </script>
+</body>
+</html>
