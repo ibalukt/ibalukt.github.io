@@ -1,0 +1,124 @@
+#dropDown {
+
+    flex-wrap:wrap;
+    border:2px solid black;
+    margin-left:auto;
+    margin-right:auto;
+    background: 
+    linear-gradient(
+        #1ECFD6,
+        #0878a4,
+        #003D73
+    );
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+    
+}
+
+#tableHeader {
+
+    display:flex;
+    border-bottom:2px solid black;
+}
+
+#upOrDown {
+    flex:1 0 50%;
+    
+
+}
+#upOrDown p{
+ 
+    width:30%;
+    margin:auto;
+    font-size:2vw
+}
+.inputContainer{
+    width:35%;
+    margin:auto;
+}
+/*The following input CSS changes were instructed from stackoverflow here:https://stackoverflow.com/a/34854325 */
+ input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #003D73;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+ }
+
+#parameters {
+    flex:1 0 50%;
+}   
+
+#parameters p{
+   
+    width:20%;
+    margin:auto;
+    font-size:2vw
+}
+
+#tableHolder {
+    
+    height: 550px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    border:1px solid black;
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+    
+
+}
+#tableHolder::-webkit-scrollbar { 
+    display: none;  // Safari and Chrome
+}
+
+#tableFooter {
+    border-top:2px solid black;
+    height:80px;
+}
+
+#buildButton {
+    margin-left:auto;
+    margin-right:auto;
+    cursor: pointer;
+}
+#buildButton p{
+    width:30%;
+    margin:auto;
+    font-size:3vw;
+}
+#info{
+    width:100%;
+    border:1px solid black;
+    margin:auto;
+}
+/*
+#destroyButton {
+    height: 20px;
+    width:20px;
+    border:1px solid red;
+}
+
+#container {
+    width:500px;
+    border:2px solid red;
+}*/
