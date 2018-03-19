@@ -6,7 +6,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ["australia","north america","south america","europe","asia","africa","antartica"],
         datasets: [{
-            label: '# of Votes',
+            label: 'Rides Per Continent',
             data: [pieData[0],pieData[1],pieData[2],pieData[3],pieData[4],pieData[5],pieData[6]],
             backgroundColor: [
                 '#1f77b4',
